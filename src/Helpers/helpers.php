@@ -5,7 +5,7 @@ if (!function_exists('themes')) {
      * Generate an asset path for the theme.
      *
      * @param string $path
-     * @param bool $secure
+     * @param bool   $secure
      *
      * @return string
      */
