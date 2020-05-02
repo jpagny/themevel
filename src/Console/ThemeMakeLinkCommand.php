@@ -2,10 +2,9 @@
 
 namespace Shipu\Themevel\Console;
 
-use Illuminate\Console\Command;
-use Shipu\Themevel\Contracts\ThemeContract;
-use File;
 use App;
+use File;
+use Illuminate\Console\Command;
 
 class ThemeMakeLinkCommand extends Command
 {
@@ -32,9 +31,9 @@ class ThemeMakeLinkCommand extends Command
     {
         if (!File::exists(config('theme.symlink_path')) && config('theme.symlink') && File::exists(config('theme.theme_path'))) {
             App::make('files')->link(config('theme.theme_path'), config('theme.symlink_path', public_path('Themes')));
-            echo "This link ".config('theme.theme_path')." is created in ".config('theme.symlink_path').".\n";
+            echo 'This link '.config('theme.theme_path').' is created in '.config('theme.symlink_path').".\n";
         } else {
-            echo "This link ".config('theme.theme_path')." is already linked in ".config('theme.symlink_path').".\n";
+            echo 'This link '.config('theme.theme_path').' is already linked in '.config('theme.symlink_path').".\n";
         }
     }
 }

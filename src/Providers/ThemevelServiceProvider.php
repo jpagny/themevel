@@ -2,8 +2,6 @@
 
 namespace Shipu\Themevel\Providers;
 
-use App;
-use File;
 use Illuminate\Support\ServiceProvider;
 use Shipu\Themevel\Console\ThemeListCommand;
 use Shipu\Themevel\Console\ThemeMakeLinkCommand;

@@ -5,7 +5,7 @@ if (!function_exists('themes')) {
      * Generate an asset path for the theme.
      *
      * @param string $path
-     * @param bool   $secure
+     * @param bool $secure
      *
      * @return string
      */
@@ -20,7 +20,7 @@ if (!function_exists('theme_mix')) {
      * Get the current theme path to a versioned Mix file.
      *
      * @param string $path
-     * @param  string  $manifestDirectory
+     * @param string $manifestDirectory
      *
      * @return \Illuminate\Support\HtmlString|string
      */
