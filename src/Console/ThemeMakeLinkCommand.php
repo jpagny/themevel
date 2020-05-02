@@ -36,5 +36,4 @@ class ThemeMakeLinkCommand extends Command
             echo 'This link '.config('theme.theme_path').' is already linked in '.config('theme.symlink_path').".\n";
         }
     }
-
 }
