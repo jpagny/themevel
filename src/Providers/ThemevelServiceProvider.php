@@ -2,27 +2,14 @@
 
 namespace Shipu\Themevel\Providers;
 
-use App;
-use File;
 use Illuminate\Support\ServiceProvider;
 use Shipu\Themevel\Console\ThemeListCommand;
+use Shipu\Themevel\Console\ThemeMakeLinkCommand;
 use Shipu\Themevel\Contracts\ThemeContract;
 use Shipu\Themevel\Managers\Theme;
 
 class ThemevelServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap the application services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        if (!File::exists(public_path('Themes')) && config('theme.symlink') && File::exists(config('theme.theme_path'))) {
-            App::make('files')->link(config('theme.theme_path'), config('theme.symlink_path', public_path('Themes')));
-        }
-    }
-
     /**
      * Register the application services.
      *
@@ -104,10 +91,12 @@ class ThemevelServiceProvider extends ServiceProvider
     {
         $this->registerThemeGeneratorCommand();
         $this->registerThemeListCommand();
+        $this->registerThemeLinkCommand();
         // Assign commands.
         $this->commands(
             'theme.create',
-            'theme.list'
+            'theme.list',
+            'theme.link'
         );
     }
 
@@ -131,6 +120,14 @@ class ThemevelServiceProvider extends ServiceProvider
     public function registerThemeListCommand()
     {
         $this->app->singleton('theme.list', ThemeListCommand::class);
+    }
+
+    /**
+     * Register theme link command.
+     */
+    public function registerThemeLinkCommand()
+    {
+        $this->app->singleton('theme.link', ThemeMakeLinkCommand::class);
     }
 
     /**
