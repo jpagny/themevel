@@ -35,13 +35,13 @@ return [
     |
     */
     'symlink'    => true,
-    
+
     /*
     |--------------------------------------------------------------------------
     | Symbolic path
     |--------------------------------------------------------------------------
     |
-    | you can change your  
+    | you can change your
     |
     */
     'symlink_path' => public_path('Themes'),

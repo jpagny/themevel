@@ -20,7 +20,7 @@ if (!function_exists('theme_mix')) {
      * Get the current theme path to a versioned Mix file.
      *
      * @param string $path
-     * @param  string  $manifestDirectory
+     * @param string $manifestDirectory
      *
      * @return \Illuminate\Support\HtmlString|string
      */
