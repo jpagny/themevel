@@ -10,21 +10,21 @@ class ThemeMakeLinkCommand extends Command
 {
     /**
      * The name and signature of the console command.
-     * 
+     *
      * @var string
      */
     protected $signature = 'theme:link';
 
     /**
      * The console command description.
-     * 
+     *
      * @var string
      */
     protected $description = 'Make link theme in public folder.';
 
     /**
      * Execute the console command.
-     * 
+     *
      * @return mixed
      */
     public function handle()
