@@ -1,21 +1,14 @@
 {
-    "name": "jpagny/themevel",
+    "name": "shipu/themevel",
     "description": "Theme and asset management for laravel 5",
     "keywords": ["theme", "child-theme", "multi", "themevel", "asset", "management", "laravel", "lumen"],
-    "homepage": "https://github.com/jpagny/themevel",
+    "homepage": "https://github.com/shipu/themevel",
     "license": "CC-BY-3.0",
     "authors": [
         {
-            "name": "Jerome Pagny",
-            "email": "pagny.jerome@gmail.com"
+            "name": "Shipu Ahamed",
+            "email": "shipuahamed01@gmail.com"
         }
-    ],
-    "repositories":
-    [
-            {
-                "type": "vcs",
-                "url": "https://github.com/jpagny/themevel.git"
-            }
     ],
     "require": {
         "hassankhan/config": "^2.1",
